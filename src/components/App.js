@@ -1,6 +1,6 @@
 // App.js
 import React, { useState, useEffect } from 'react';
-import WeatherDisplay from './WeatherDisplay';
+import WeatherDisplay from './components/WeatherDisplay';
 
 function App() {
   // State to hold weather data
