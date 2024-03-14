@@ -1,17 +1,16 @@
-// WeatherDisplay.js
-import React from 'react';
+import React from "react";
 
-function WeatherDisplay({ weather }) {
-  const temperatureStyle = {
-    color: weather.temperature > 20 ? 'red' : 'blue'
-  };
+const WeatherDisplay = (props) => {
+  const { temperature, conditions } = props.data;
 
   return (
-    <div>
-      <p style={temperatureStyle}>Temperature: {weather.temperature}</p>
-      <p>Conditions: {weather.conditions}</p>
-    </div>
+    <>
+      <p >
+        Temperature:<span style={{ color: temperature > 20 ? 'red' : 'black' }}> {temperature}</span>
+      </p>
+      <p>Conditions: {conditions}</p>
+    </>
   );
-}
+};
 
 export default WeatherDisplay;

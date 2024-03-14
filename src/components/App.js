@@ -1,29 +1,15 @@
-// App.js
-import React, { useState, useEffect } from 'react';
-import WeatherDisplay from './components/WeatherDisplay';
+import React from "react";
+import './../styles/App.css';
+import WeatherDisplay from "./WeatherDisplay";
 
-
-function App() {
-  // State to hold weather data
-  const [weatherData, setWeatherData] = useState({ temperature: 0, conditions: "" });
-
-  useEffect(() => {
-    // Simulate fetching weather data
-    // In a real app, this would fetch data from an API
-    const fetchWeatherData = () => {
-      // Simulated weather data
-      const fetchedData = { temperature: 25, conditions: "Sunny" };
-      setWeatherData(fetchedData);
-    };
-
-    fetchWeatherData();
-  }, []); // Empty dependency array ensures useEffect runs only once
-
+const App = () => {
+  let data = { temperature: 25, conditions: "Sunny" }
   return (
-    <div className="App">
-      <WeatherDisplay weather={weatherData} />
+    <div>
+        {/* Do not remove the main div */}
+        <WeatherDisplay data={data}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
