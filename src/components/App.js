@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import WeatherDisplay from './components/WeatherDisplay';
 
+
 function App() {
   // State to hold weather data
   const [weatherData, setWeatherData] = useState({ temperature: 0, conditions: "" });
